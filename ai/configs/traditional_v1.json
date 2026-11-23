@@ -1,0 +1,31 @@
+{
+  "version": "traditional_v1",
+  "description": "PipeAugment AI Traditional Augmentation Configuration v1",
+  "base_seed": 42,
+  "parameter_ranges": {
+    "brightness_factor": [0.80, 1.20],
+    "contrast_factor": [0.85, 1.15],
+    "gamma_exponent": [0.85, 1.20],
+    "uneven_illumination_intensity": [0.85, 1.15],
+    "soft_shadow_intensity": [0.75, 0.90],
+    "gaussian_blur_sigma": [0.40, 0.90],
+    "gaussian_noise_std": [2.0, 6.0],
+    "jpeg_quality": [75, 90],
+    "downsample_scale": [0.65, 0.90]
+  },
+  "variant_1_lighting_transforms": [
+    "brightness",
+    "contrast",
+    "gamma",
+    "uneven_illumination",
+    "soft_shadow"
+  ],
+  "variant_2_quality_transforms": [
+    "gaussian_blur",
+    "gaussian_noise",
+    "jpeg_compression",
+    "downsample_restore"
+  ],
+  "output_format": "png",
+  "output_directory": "datasets/augmented/traditional_v1"
+}

@@ -1,0 +1,22 @@
+{
+  "timestamp_utc": "2026-11-22T14:26:40.840519+00:00",
+  "total_targets": 200,
+  "total_generated": 200,
+  "total_admitted": 169,
+  "total_flagged": 31,
+  "total_failed": 0,
+  "admission_rate": 0.845,
+  "admitted_by_class": {
+    "non_corroded": 92,
+    "corroded": 77
+  },
+  "admitted_by_condition": {
+    "low_light_inspection": 85,
+    "directional_industrial_lighting": 84
+  },
+  "mean_admitted_ssim": 0.6741,
+  "mean_admitted_lpips": 0.188,
+  "mean_admitted_edge_iou": 0.2505,
+  "total_runtime_seconds": 425.47,
+  "peak_gpu_allocated_mb": 4021.92
+}

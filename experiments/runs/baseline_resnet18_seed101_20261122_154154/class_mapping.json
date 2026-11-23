@@ -1,0 +1,14 @@
+{
+  "class_to_index": {
+    "non_corroded": 0,
+    "corroded": 1
+  },
+  "index_to_class": {
+    "0": "non_corroded",
+    "1": "corroded"
+  },
+  "source_mapping": {
+    "no_corrosion": "non_corroded",
+    "corrosion": "corroded"
+  }
+}

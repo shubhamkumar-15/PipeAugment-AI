@@ -1,0 +1,624 @@
+{
+  "pilot_parent_count": 12,
+  "variations_generated": 24,
+  "all_technical_checks_passed": true,
+  "mean_pixel_abs_diff_avg": 4.9615,
+  "mean_pixel_abs_diff_range": [
+    0.3524,
+    14.5335
+  ],
+  "max_clipping_low_rate": 0.10521,
+  "max_clipping_high_rate": 0.05371,
+  "contact_sheet_path": "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/traditional_v1/traditional_pilot_contact_sheet.png",
+  "human_review_status": "not_reviewed (technical quantitative checks only)",
+  "records": [
+    {
+      "parent_id": "005f6893-350c-4325-b357-7406681884b9_png_jpg.rf.caaa3dabdb86ab6f01ee883e5c0ab3a3",
+      "label": "non_corroded",
+      "variant": 1,
+      "transform_category": "lighting",
+      "transform_name": "brightness",
+      "parameters": {
+        "factor": 0.9501
+      },
+      "seed": 1166291394,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.00023,
+        "clipping_high_rate": 0.0,
+        "mean_pixel_abs_diff": 5.6051,
+        "output_mean": 97.032,
+        "output_std": 61.485
+      },
+      "filename": "pilot_005f6893-350c-43_var1_brightness.png"
+    },
+    {
+      "parent_id": "005f6893-350c-4325-b357-7406681884b9_png_jpg.rf.caaa3dabdb86ab6f01ee883e5c0ab3a3",
+      "label": "non_corroded",
+      "variant": 2,
+      "transform_category": "image_quality",
+      "transform_name": "gaussian_blur",
+      "parameters": {
+        "sigma": 0.699
+      },
+      "seed": 650743847,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.0,
+        "clipping_high_rate": 0.00091,
+        "mean_pixel_abs_diff": 2.0818,
+        "output_mean": 102.638,
+        "output_std": 64.284
+      },
+      "filename": "pilot_005f6893-350c-43_var2_gaussian_blur.png"
+    },
+    {
+      "parent_id": "017ff280-cf7b-43a7-9e54-ea7a3014b667_png_jpg.rf.c752ac524466175f8b09c6162a08c51a",
+      "label": "non_corroded",
+      "variant": 1,
+      "transform_category": "lighting",
+      "transform_name": "contrast",
+      "parameters": {
+        "factor": 1.0889
+      },
+      "seed": 837853596,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.0537,
+        "clipping_high_rate": 0.05371,
+        "mean_pixel_abs_diff": 5.2172,
+        "output_mean": 105.738,
+        "output_std": 76.798
+      },
+      "filename": "pilot_017ff280-cf7b-43_var1_contrast.png"
+    },
+    {
+      "parent_id": "017ff280-cf7b-43a7-9e54-ea7a3014b667_png_jpg.rf.c752ac524466175f8b09c6162a08c51a",
+      "label": "non_corroded",
+      "variant": 2,
+      "transform_category": "image_quality",
+      "transform_name": "gaussian_noise",
+      "parameters": {
+        "std": 4.152
+      },
+      "seed": 1529078861,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.01238,
+        "clipping_high_rate": 0.01225,
+        "mean_pixel_abs_diff": 3.2706,
+        "output_mean": 107.528,
+        "output_std": 71.599
+      },
+      "filename": "pilot_017ff280-cf7b-43_var2_gaussian_noise.png"
+    },
+    {
+      "parent_id": "027b596c-b669-46fe-ae74-c56d677feee3_png_jpg.rf.e1832043fa563a8d198f1a3b60260a5f",
+      "label": "non_corroded",
+      "variant": 1,
+      "transform_category": "lighting",
+      "transform_name": "gamma",
+      "parameters": {
+        "gamma": 1.1794
+      },
+      "seed": 1480302424,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.00108,
+        "clipping_high_rate": 0.01223,
+        "mean_pixel_abs_diff": 11.2544,
+        "output_mean": 80.568,
+        "output_std": 74.031
+      },
+      "filename": "pilot_027b596c-b669-46_var1_gamma.png"
+    },
+    {
+      "parent_id": "027b596c-b669-46fe-ae74-c56d677feee3_png_jpg.rf.e1832043fa563a8d198f1a3b60260a5f",
+      "label": "non_corroded",
+      "variant": 2,
+      "transform_category": "image_quality",
+      "transform_name": "jpeg_compression",
+      "parameters": {
+        "quality": 82
+      },
+      "seed": 39350869,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.00045,
+        "clipping_high_rate": 0.01028,
+        "mean_pixel_abs_diff": 1.2473,
+        "output_mean": 91.809,
+        "output_std": 72.166
+      },
+      "filename": "pilot_027b596c-b669-46_var2_jpeg_compression.png"
+    },
+    {
+      "parent_id": "03a42e9a-0475-4192-b2b4-3133cc809e36_png_jpg.rf.9f5f824d3b8c9e81d4df46b71586504a",
+      "label": "non_corroded",
+      "variant": 1,
+      "transform_category": "lighting",
+      "transform_name": "uneven_illumination",
+      "parameters": {
+        "angle_deg": 85.25,
+        "intensity": 1.0584
+      },
+      "seed": 369805191,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.003,
+        "clipping_high_rate": 0.01554,
+        "mean_pixel_abs_diff": 1.9613,
+        "output_mean": 92.886,
+        "output_std": 58.42
+      },
+      "filename": "pilot_03a42e9a-0475-41_var1_uneven_illumination.png"
+    },
+    {
+      "parent_id": "03a42e9a-0475-4192-b2b4-3133cc809e36_png_jpg.rf.9f5f824d3b8c9e81d4df46b71586504a",
+      "label": "non_corroded",
+      "variant": 2,
+      "transform_category": "image_quality",
+      "transform_name": "downsample_restore",
+      "parameters": {
+        "scale": 0.7614
+      },
+      "seed": 1513887746,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.00228,
+        "clipping_high_rate": 0.00238,
+        "mean_pixel_abs_diff": 1.435,
+        "output_mean": 93.013,
+        "output_std": 56.785
+      },
+      "filename": "pilot_03a42e9a-0475-41_var2_downsample_restore.png"
+    },
+    {
+      "parent_id": "068bc27d-cde4-46f5-b7ac-9ebf19df1f4a_png_jpg.rf.89d8d97fc6de43a1c277c29638ee280f",
+      "label": "non_corroded",
+      "variant": 1,
+      "transform_category": "lighting",
+      "transform_name": "soft_shadow",
+      "parameters": {
+        "center_x": 434.8,
+        "center_y": 402.8,
+        "radius": 310.9,
+        "shadow_intensity": 0.8814
+      },
+      "seed": 16934879,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.01405,
+        "clipping_high_rate": 0.0,
+        "mean_pixel_abs_diff": 12.8575,
+        "output_mean": 156.793,
+        "output_std": 54.684
+      },
+      "filename": "pilot_068bc27d-cde4-46_var1_soft_shadow.png"
+    },
+    {
+      "parent_id": "068bc27d-cde4-46f5-b7ac-9ebf19df1f4a_png_jpg.rf.89d8d97fc6de43a1c277c29638ee280f",
+      "label": "non_corroded",
+      "variant": 2,
+      "transform_category": "image_quality",
+      "transform_name": "gaussian_blur",
+      "parameters": {
+        "sigma": 0.6568
+      },
+      "seed": 3741552986,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.00734,
+        "clipping_high_rate": 0.00178,
+        "mean_pixel_abs_diff": 0.4869,
+        "output_mean": 169.652,
+        "output_std": 57.875
+      },
+      "filename": "pilot_068bc27d-cde4-46_var2_gaussian_blur.png"
+    },
+    {
+      "parent_id": "06a52349-304e-4748-b64c-c0c1266613ce_png_jpg.rf.307280db7657f0c3b1ca0e3c46632d32",
+      "label": "non_corroded",
+      "variant": 1,
+      "transform_category": "lighting",
+      "transform_name": "brightness",
+      "parameters": {
+        "factor": 0.9481
+      },
+      "seed": 956207626,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.00467,
+        "clipping_high_rate": 0.0,
+        "mean_pixel_abs_diff": 6.1126,
+        "output_mean": 101.957,
+        "output_std": 65.387
+      },
+      "filename": "pilot_06a52349-304e-47_var1_brightness.png"
+    },
+    {
+      "parent_id": "06a52349-304e-4748-b64c-c0c1266613ce_png_jpg.rf.307280db7657f0c3b1ca0e3c46632d32",
+      "label": "non_corroded",
+      "variant": 2,
+      "transform_category": "image_quality",
+      "transform_name": "gaussian_noise",
+      "parameters": {
+        "std": 4.023
+      },
+      "seed": 2455402494,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.00733,
+        "clipping_high_rate": 0.00345,
+        "mean_pixel_abs_diff": 3.2013,
+        "output_mean": 107.574,
+        "output_std": 69.043
+      },
+      "filename": "pilot_06a52349-304e-47_var2_gaussian_noise.png"
+    },
+    {
+      "parent_id": "012a7298-93b4-4014-9d7a-a6bdf6b64dc5_png_jpg.rf.4870bab973328a687dcba0e94e9abc3e",
+      "label": "corroded",
+      "variant": 1,
+      "transform_category": "lighting",
+      "transform_name": "contrast",
+      "parameters": {
+        "factor": 1.055
+      },
+      "seed": 3257175260,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.03627,
+        "clipping_high_rate": 0.01427,
+        "mean_pixel_abs_diff": 3.797,
+        "output_mean": 99.724,
+        "output_std": 77.928
+      },
+      "filename": "pilot_012a7298-93b4-40_var1_contrast.png"
+    },
+    {
+      "parent_id": "012a7298-93b4-4014-9d7a-a6bdf6b64dc5_png_jpg.rf.4870bab973328a687dcba0e94e9abc3e",
+      "label": "corroded",
+      "variant": 2,
+      "transform_category": "image_quality",
+      "transform_name": "jpeg_compression",
+      "parameters": {
+        "quality": 86
+      },
+      "seed": 3388042351,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.00808,
+        "clipping_high_rate": 0.0023,
+        "mean_pixel_abs_diff": 0.3524,
+        "output_mean": 101.58,
+        "output_std": 74.134
+      },
+      "filename": "pilot_012a7298-93b4-40_var2_jpeg_compression.png"
+    },
+    {
+      "parent_id": "0326a31a-773f-4644-9a13-171826cb1fd8_png_jpg.rf.24bab610cb7177778104d11a031d5558",
+      "label": "corroded",
+      "variant": 1,
+      "transform_category": "lighting",
+      "transform_name": "gamma",
+      "parameters": {
+        "gamma": 1.1336
+      },
+      "seed": 1443591501,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.01244,
+        "clipping_high_rate": 0.00104,
+        "mean_pixel_abs_diff": 9.6035,
+        "output_mean": 79.061,
+        "output_std": 58.466
+      },
+      "filename": "pilot_0326a31a-773f-46_var1_gamma.png"
+    },
+    {
+      "parent_id": "0326a31a-773f-4644-9a13-171826cb1fd8_png_jpg.rf.24bab610cb7177778104d11a031d5558",
+      "label": "corroded",
+      "variant": 2,
+      "transform_category": "image_quality",
+      "transform_name": "downsample_restore",
+      "parameters": {
+        "scale": 0.7961
+      },
+      "seed": 374429038,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.00411,
+        "clipping_high_rate": 0.0002,
+        "mean_pixel_abs_diff": 2.6383,
+        "output_mean": 88.664,
+        "output_std": 57.917
+      },
+      "filename": "pilot_0326a31a-773f-46_var2_downsample_restore.png"
+    },
+    {
+      "parent_id": "04a735c6-d0c5-4fe0-95d5-88e65d749c2e_png_jpg.rf.eeb48b3cd59920355a46a3d7d094db8b",
+      "label": "corroded",
+      "variant": 1,
+      "transform_category": "lighting",
+      "transform_name": "uneven_illumination",
+      "parameters": {
+        "angle_deg": 58.84,
+        "intensity": 1.0581
+      },
+      "seed": 2135642048,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.00566,
+        "clipping_high_rate": 0.00799,
+        "mean_pixel_abs_diff": 1.9693,
+        "output_mean": 111.714,
+        "output_std": 71.98
+      },
+      "filename": "pilot_04a735c6-d0c5-4f_var1_uneven_illumination.png"
+    },
+    {
+      "parent_id": "04a735c6-d0c5-4fe0-95d5-88e65d749c2e_png_jpg.rf.eeb48b3cd59920355a46a3d7d094db8b",
+      "label": "corroded",
+      "variant": 2,
+      "transform_category": "image_quality",
+      "transform_name": "gaussian_blur",
+      "parameters": {
+        "sigma": 0.7958
+      },
+      "seed": 1440648559,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.0032,
+        "clipping_high_rate": 6e-05,
+        "mean_pixel_abs_diff": 1.9908,
+        "output_mean": 112.079,
+        "output_std": 70.878
+      },
+      "filename": "pilot_04a735c6-d0c5-4f_var2_gaussian_blur.png"
+    },
+    {
+      "parent_id": "06aa42df-4b16-4060-beab-2cc8125bcfb6_png_jpg.rf.0bd1cd4d6c1d01f6ad1282ecb02b7f6e",
+      "label": "corroded",
+      "variant": 1,
+      "transform_category": "lighting",
+      "transform_name": "soft_shadow",
+      "parameters": {
+        "center_x": 193.4,
+        "center_y": 397.1,
+        "radius": 332.0,
+        "shadow_intensity": 0.7991
+      },
+      "seed": 262694325,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.03458,
+        "clipping_high_rate": 0.0,
+        "mean_pixel_abs_diff": 12.0644,
+        "output_mean": 64.217,
+        "output_std": 54.771
+      },
+      "filename": "pilot_06aa42df-4b16-40_var1_soft_shadow.png"
+    },
+    {
+      "parent_id": "06aa42df-4b16-4060-beab-2cc8125bcfb6_png_jpg.rf.0bd1cd4d6c1d01f6ad1282ecb02b7f6e",
+      "label": "corroded",
+      "variant": 2,
+      "transform_category": "image_quality",
+      "transform_name": "gaussian_noise",
+      "parameters": {
+        "std": 4.818
+      },
+      "seed": 1987820885,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.04223,
+        "clipping_high_rate": 0.00176,
+        "mean_pixel_abs_diff": 3.7298,
+        "output_mean": 75.905,
+        "output_std": 64.846
+      },
+      "filename": "pilot_06aa42df-4b16-40_var2_gaussian_noise.png"
+    },
+    {
+      "parent_id": "07dfc271-d967-4b56-be6e-29ca6d4729d2_png_jpg.rf.bbf9651ee2985da4b5286211762a36f1",
+      "label": "corroded",
+      "variant": 1,
+      "transform_category": "lighting",
+      "transform_name": "brightness",
+      "parameters": {
+        "factor": 0.8506
+      },
+      "seed": 2974917933,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.05322,
+        "clipping_high_rate": 0.0,
+        "mean_pixel_abs_diff": 14.5335,
+        "output_mean": 79.519,
+        "output_std": 64.03
+      },
+      "filename": "pilot_07dfc271-d967-4b_var1_brightness.png"
+    },
+    {
+      "parent_id": "07dfc271-d967-4b56-be6e-29ca6d4729d2_png_jpg.rf.bbf9651ee2985da4b5286211762a36f1",
+      "label": "corroded",
+      "variant": 2,
+      "transform_category": "image_quality",
+      "transform_name": "jpeg_compression",
+      "parameters": {
+        "quality": 87
+      },
+      "seed": 3750618279,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.04064,
+        "clipping_high_rate": 0.0071,
+        "mean_pixel_abs_diff": 0.6389,
+        "output_mean": 94.071,
+        "output_std": 75.224
+      },
+      "filename": "pilot_07dfc271-d967-4b_var2_jpeg_compression.png"
+    },
+    {
+      "parent_id": "0a1ddef9-efd8-4945-aeb7-640cb46ca032_png_jpg.rf.76cac2f4e0247df4c66c98b404b17e37",
+      "label": "corroded",
+      "variant": 1,
+      "transform_category": "lighting",
+      "transform_name": "contrast",
+      "parameters": {
+        "factor": 1.1372
+      },
+      "seed": 2472669120,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.10521,
+        "clipping_high_rate": 0.01969,
+        "mean_pixel_abs_diff": 8.6597,
+        "output_mean": 88.411,
+        "output_std": 76.876
+      },
+      "filename": "pilot_0a1ddef9-efd8-49_var1_contrast.png"
+    },
+    {
+      "parent_id": "0a1ddef9-efd8-4945-aeb7-640cb46ca032_png_jpg.rf.76cac2f4e0247df4c66c98b404b17e37",
+      "label": "corroded",
+      "variant": 2,
+      "transform_category": "image_quality",
+      "transform_name": "downsample_restore",
+      "parameters": {
+        "scale": 0.6534
+      },
+      "seed": 319311248,
+      "stats": {
+        "status": "passed",
+        "dimension_preserved": true,
+        "dtype_uint8": true,
+        "finite_pixels": true,
+        "is_constant": false,
+        "pixel_difference_detected": true,
+        "clipping_low_rate": 0.00411,
+        "clipping_high_rate": 0.00085,
+        "mean_pixel_abs_diff": 4.368,
+        "output_mean": 92.966,
+        "output_std": 67.743
+      },
+      "filename": "pilot_0a1ddef9-efd8-49_var2_downsample_restore.png"
+    }
+  ]
+}

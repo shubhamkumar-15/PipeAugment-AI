@@ -1,0 +1,61 @@
+{
+  "pilot_name": "controlnet_canny_v1",
+  "model_id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "model_revision": "main",
+  "controlnet_id": "lllyasviel/control_v11p_sd15_canny",
+  "controlnet_revision": "main",
+  "license": "CreativeML OpenRAIL-M",
+  "precision": "float16",
+  "device": "cuda",
+  "offload_strategy": "none",
+  "parent_count": 6,
+  "total_outputs_targeted": 24,
+  "attempted_count": 23,
+  "successful_count": 23,
+  "skipped_existing_count": 1,
+  "failed_count": 0,
+  "total_valid_outputs": 24,
+  "human_review_status": "pending",
+  "training_eligibility": false,
+  "runtime_metrics": {
+    "total_elapsed_seconds": 48.69,
+    "avg_runtime_per_image_seconds": 2.25,
+    "max_runtime_seconds": 9.2
+  },
+  "memory_metrics": {
+    "max_peak_gpu_allocated_mb": 4012.16,
+    "avg_peak_gpu_allocated_mb": 4012.16,
+    "max_peak_gpu_reserved_mb": 4280.0,
+    "avg_peak_gpu_reserved_mb": 4280.0,
+    "min_device_memory_free_mb": 2729.0
+  },
+  "ssim_diagnostics": {
+    "mean_ssim_rgb": 0.6225,
+    "min_ssim_rgb": 0.5623,
+    "max_ssim_rgb": 0.7317
+  },
+  "edge_overlap_diagnostics": {
+    "mean_edge_overlap_iou": 0.2328,
+    "min_edge_overlap_iou": 0.1808,
+    "max_edge_overlap_iou": 0.2829,
+    "mean_edge_overlap_dice": 0.3767
+  },
+  "contact_sheets": [
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/controlnet_canny_v1/contact_sheets/sheet_parent_01_27a30c35-ace6-40_low_light_inspection.png",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/controlnet_canny_v1/contact_sheets/sheet_parent_01_27a30c35-ace6-40_directional_industrial_lighting.png",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/controlnet_canny_v1/contact_sheets/sheet_parent_02_0888523b-18fd-44_low_light_inspection.png",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/controlnet_canny_v1/contact_sheets/sheet_parent_02_0888523b-18fd-44_directional_industrial_lighting.png",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/controlnet_canny_v1/contact_sheets/sheet_parent_03_a0b0ecba-c1de-41_low_light_inspection.png",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/controlnet_canny_v1/contact_sheets/sheet_parent_03_a0b0ecba-c1de-41_directional_industrial_lighting.png",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/controlnet_canny_v1/contact_sheets/sheet_parent_04_796e406a-4bcc-4c_low_light_inspection.png",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/controlnet_canny_v1/contact_sheets/sheet_parent_04_796e406a-4bcc-4c_directional_industrial_lighting.png",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/controlnet_canny_v1/contact_sheets/sheet_parent_05_13d2a961-7952-41_low_light_inspection.png",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/controlnet_canny_v1/contact_sheets/sheet_parent_05_13d2a961-7952-41_directional_industrial_lighting.png",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/controlnet_canny_v1/contact_sheets/sheet_parent_06_d6dc47f8-a720-4a_low_light_inspection.png",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/controlnet_canny_v1/contact_sheets/sheet_parent_06_d6dc47f8-a720-4a_directional_industrial_lighting.png"
+  ],
+  "review_csv": "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/controlnet_canny_v1/review.csv",
+  "matched_plain_baseline_dir": "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/diffusion_v1",
+  "generation_start_utc": "2026-11-22T12:14:14.006530+00:00",
+  "generation_end_utc": "2026-11-22T12:15:02.695008+00:00"
+}

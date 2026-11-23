@@ -1,0 +1,4 @@
+experiment,model,dataset_composition,total_training_pool,samples_per_epoch,best_epoch,val_accuracy,val_macro_f1,non_corroded_precision,non_corroded_recall,corroded_precision,corroded_recall,val_loss,false_positives,false_negatives,error_image_ids
+Baseline A,ResNet-18 (IMAGENET1K_V1),Originals only (train.csv),480,480,4,0.9667,0.9667,0.9355,1.0000,1.0000,0.9355,0.2306,0,2,"4efaeb5e-5bdf-41c0-a7d1-0f40a1b80c3e; 74144b87-062e-4671-97c7-1fec2e1a0496"
+Experiment B,ResNet-18 (IMAGENET1K_V1),Originals + Traditional v1,1440,480,3,0.9667,0.9667,0.9355,1.0000,1.0000,0.9355,0.1683,0,2,"4efaeb5e-5bdf-41c0-a7d1-0f40a1b80c3e; 74144b87-062e-4671-97c7-1fec2e1a0496"
+Experiment C (PipeAugment AI),ResNet-18 (IMAGENET1K_V1),Originals + Traditional v1 + Quality-Screened Generative v1,1609,480,10,0.9667,0.9666,0.9655,0.9655,0.9677,0.9677,0.2043,1,1,"4da016e3-59ca-42c3-b111-ee2aee82999c; 74144b87-062e-4671-97c7-1fec2e1a0496"

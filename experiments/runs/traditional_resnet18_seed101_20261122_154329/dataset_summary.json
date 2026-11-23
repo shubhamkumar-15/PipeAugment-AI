@@ -1,0 +1,17 @@
+{
+  "experiment_name": "traditional_resnet18",
+  "dataset_name": "k-pipelines-traditional-v1",
+  "training_pool_size": 1440,
+  "samples_per_epoch": 480,
+  "optimizer_steps_per_epoch": 30,
+  "actual_total_steps": 330,
+  "val_samples": 60,
+  "best_epoch": 6,
+  "best_val_macro_f1": 0.9833287024173382,
+  "best_val_accuracy": 0.9833333333333333,
+  "corrosion_precision": 1.0,
+  "corrosion_recall": 0.967741935483871,
+  "validation_errors_count": 1,
+  "total_epochs_trained": 11,
+  "early_stopping_triggered": true
+}

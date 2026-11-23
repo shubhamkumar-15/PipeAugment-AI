@@ -1,0 +1,39 @@
+{
+  "accuracy": 0.5,
+  "macro_f1": 0.4666666666666667,
+  "macro_precision": 0.4666666666666667,
+  "macro_recall": 0.4666666666666667,
+  "total_samples": 8,
+  "class_order": [
+    "non_corroded",
+    "corroded"
+  ],
+  "per_class": {
+    "non_corroded": {
+      "class_index": 0,
+      "precision": 0.6,
+      "recall": 0.6,
+      "f1_score": 0.6,
+      "ground_truth_support": 5,
+      "predicted_count": 5
+    },
+    "corroded": {
+      "class_index": 1,
+      "precision": 0.3333333333333333,
+      "recall": 0.3333333333333333,
+      "f1_score": 0.3333333333333333,
+      "ground_truth_support": 3,
+      "predicted_count": 3
+    }
+  },
+  "confusion_matrix": [
+    [
+      3,
+      2
+    ],
+    [
+      2,
+      1
+    ]
+  ]
+}

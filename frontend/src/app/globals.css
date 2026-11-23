@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap");
+@import "tailwindcss";
+
+:root {
+  /* LIGHT MODE (Default — Crisp Editorial Clarity) */
+  --bg: #ffffff;
+  --bg-2: #f7f8fc;
+  --bg-3: #eef1f8;
+  --ink: #0a0f1e;
+  --ink-2: #1e2a45;
+  --muted: #5a6785;
+  --border: #e2e7f0;
+  --border-2: #cbd2e0;
+  --saffron: #f04e00;
+  --amber: #ff8c00;
+  --gold: #f0b800;
+  --green: #0e8a00;
+  --green-live: #12b800;
+  --danger: #e11d48;
+  --shadow-s: 0 2px 12px rgba(10, 15, 30, 0.06);
+  --shadow-m: 0 10px 32px rgba(10, 15, 30, 0.08);
+  --shadow-l: 0 24px 60px rgba(10, 15, 30, 0.12);
+
+  /* DARK VAULT SURFACE (Always Obsidian #0a0f1e for Inspection & Framing) */
+  --vault-bg: #0a0f1e;
+  --vault-card: #121a2b;
+  --vault-border: rgba(255, 255, 255, 0.10);
+  --grid-line: rgba(10, 15, 30, 0.04);
+}
+
+/* DARK MODE (Obsidian Cyber-Saffron) */
+html[data-theme="dark"] {
+  --bg: #080c14;
+  --bg-2: #0d1520;
+  --bg-3: #132038;
+  --ink: #ffffff;
+  --ink-2: #e8eff8;
+  --muted: rgba(232, 239, 248, 0.56);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-2: rgba(255, 90, 0, 0.28);
+  --saffron: #ff5a00;
+  --amber: #ff9b00;
+  --gold: #f0c040;
+  --green: #1a9e0a;
+  --green-live: #5cdb3a;
+  --danger: #fb7185;
+  --shadow-s: 0 4px 18px rgba(0, 0, 0, 0.28);
+  --shadow-m: 0 10px 36px rgba(0, 0, 0, 0.36);
+  --shadow-l: 0 24px 60px rgba(0, 0, 0, 0.50);
+
+  --vault-bg: #0a0f1e;
+  --vault-card: #121a2b;
+  --vault-border: rgba(255, 255, 255, 0.10);
+  --grid-line: rgba(255, 255, 255, 0.04);
+}
+
+@theme {
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-bg-3: var(--bg-3);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-border-2: var(--border-2);
+  --color-saffron: var(--saffron);
+  --color-amber: var(--amber);
+  --color-gold: var(--gold);
+  --color-green: var(--green);
+  --color-green-live: var(--green-live);
+  --color-danger: var(--danger);
+
+  --color-vault-bg: var(--vault-bg);
+  --color-vault-card: var(--vault-card);
+  --color-vault-border: var(--vault-border);
+
+  --font-display: var(--font-bebas-neue), sans-serif;
+  --font-body: var(--font-dm-sans), sans-serif;
+  --font-sans: var(--font-space-grotesk), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+}
+
+/* Base Styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--ink-2);
+  font-family: var(--font-dm-sans), sans-serif;
+  overflow-x: hidden;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* Technical Inspection Grid */
+.bg-inspection-grid {
+  background-size: 24px 24px;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+}
+
+/* Dark Vault Ambient Glow */
+.vault-glow {
+  background: radial-gradient(
+    ellipse 65% 50% at 85% 0%,
+    rgba(240, 78, 0, 0.14),
+    transparent 70%
+  );
+}
+
+/* Soft Editorial Hero Glow in Light Mode */
+.hero-ambient-glow {
+  background: radial-gradient(
+    ellipse 55% 45% at 90% 10%,
+    rgba(240, 78, 0, 0.05),
+    transparent 70%
+  );
+}
+
+/* Hollow Outline Headline Text */
+.hollow-headline {
+  -webkit-text-stroke: 1.5px var(--border-2);
+  color: transparent;
+}
+html[data-theme="dark"] .hollow-headline {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.35);
+  color: transparent;
+}
+
+/* Animations */
+@keyframes pageReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroEntry {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dotRipple {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(18, 184, 0, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(18, 184, 0, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(18, 184, 0, 0);
+  }
+}
+
+@keyframes drawerInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-page-reveal {
+  animation: pageReveal 380ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-hero-entry {
+  animation: heroEntry 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-dot-ripple {
+  animation: dotRipple 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-drawer-in {
+  animation: drawerInRight 280ms cubic-bezier(0.32, 0.72, 0, 1) forwards;
+}
+
+.animate-ticker {
+  animation: ticker 32s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Tactile Card Lift */
+.lift-hover {
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+.lift-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-m);
+}
+
+/* Stagger Utilities */
+.stagger-1 { animation-delay: 50ms; }
+.stagger-2 { animation-delay: 100ms; }
+.stagger-3 { animation-delay: 150ms; }
+.stagger-4 { animation-delay: 200ms; }
+
+/* Prefers-reduced-motion honor */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  .lift-hover:hover {
+    transform: none !important;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-2);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--saffron);
+}

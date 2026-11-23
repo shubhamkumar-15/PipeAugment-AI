@@ -1,0 +1,43 @@
+{
+  "pilot_name": "diffusion_pilot_v1",
+  "model_id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "model_revision": "main",
+  "license": "CreativeML OpenRAIL-M",
+  "precision": "float16",
+  "device": "cuda",
+  "offload_strategy": "none",
+  "parent_count": 6,
+  "total_outputs_targeted": 24,
+  "attempted_count": 23,
+  "successful_count": 23,
+  "skipped_existing_count": 1,
+  "failed_count": 0,
+  "total_valid_outputs": 24,
+  "human_review_status": "pending",
+  "training_eligibility": false,
+  "runtime_metrics": {
+    "total_elapsed_seconds": 46.72,
+    "avg_runtime_per_image_seconds": 2.53,
+    "max_runtime_seconds": 17.54
+  },
+  "memory_metrics": {
+    "max_peak_gpu_allocated_mb": 3280.44,
+    "avg_peak_gpu_allocated_mb": 3280.44
+  },
+  "ssim_diagnostics": {
+    "mean_ssim_rgb": 0.5988,
+    "min_ssim_rgb": 0.5032,
+    "max_ssim_rgb": 0.7416
+  },
+  "contact_sheets": [
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/diffusion_v1/contact_sheets/contact_sheet_parent_01_27a30c35-ace6-40.png",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/diffusion_v1/contact_sheets/contact_sheet_parent_02_0888523b-18fd-44.png",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/diffusion_v1/contact_sheets/contact_sheet_parent_03_a0b0ecba-c1de-41.png",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/diffusion_v1/contact_sheets/contact_sheet_parent_04_796e406a-4bcc-4c.png",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/diffusion_v1/contact_sheets/contact_sheet_parent_05_13d2a961-7952-41.png",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/diffusion_v1/contact_sheets/contact_sheet_parent_06_d6dc47f8-a720-4a.png"
+  ],
+  "review_csv": "D:/vscode/Gen AI Project/pipeaugment-ai/experiments/pilots/diffusion_v1/review.csv",
+  "generation_start_utc": "2026-11-22T11:53:56.136296+00:00",
+  "generation_end_utc": "2026-11-22T11:54:42.860314+00:00"
+}

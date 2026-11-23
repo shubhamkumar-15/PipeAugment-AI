@@ -1,0 +1,154 @@
+{
+  "version": "quality_validation_v1",
+  "total_evaluated": 72,
+  "total_pass": 52,
+  "total_flag_for_review": 20,
+  "total_fail": 0,
+  "method_groups": {
+    "traditional_cv": {
+      "label": "Traditional CV Pilot (24)",
+      "count": 24,
+      "status_counts": {
+        "pass": 17,
+        "flag_for_review": 7,
+        "fail": 0
+      },
+      "ssim": {
+        "mean": 0.9618,
+        "min": 0.8722,
+        "max": 0.9989
+      },
+      "lpips": {
+        "mean": 0.032,
+        "min": 0.0007,
+        "max": 0.122
+      },
+      "edge_iou": {
+        "mean": 0.7978,
+        "min": 0.4412,
+        "max": 0.9742
+      },
+      "rust_area_delta": {
+        "mean": 0.0,
+        "min": -0.0574,
+        "max": 0.1095
+      }
+    },
+    "plain_sd15_s20": {
+      "label": "Plain SD 1.5 s=0.20 (12)",
+      "count": 12,
+      "status_counts": {
+        "pass": 8,
+        "flag_for_review": 4,
+        "fail": 0
+      },
+      "ssim": {
+        "mean": 0.6396,
+        "min": 0.5782,
+        "max": 0.7416
+      },
+      "lpips": {
+        "mean": 0.1896,
+        "min": 0.1447,
+        "max": 0.2289
+      },
+      "edge_iou": {
+        "mean": 0.1925,
+        "min": 0.1689,
+        "max": 0.2129
+      },
+      "rust_area_delta": {
+        "mean": -0.0645,
+        "min": -0.102,
+        "max": 0.0008
+      }
+    },
+    "plain_sd15_s35": {
+      "label": "Plain SD 1.5 s=0.35 (12)",
+      "count": 12,
+      "status_counts": {
+        "pass": 4,
+        "flag_for_review": 8,
+        "fail": 0
+      },
+      "ssim": {
+        "mean": 0.5581,
+        "min": 0.5032,
+        "max": 0.6756
+      },
+      "lpips": {
+        "mean": 0.266,
+        "min": 0.2071,
+        "max": 0.3117
+      },
+      "edge_iou": {
+        "mean": 0.1515,
+        "min": 0.1304,
+        "max": 0.1693
+      },
+      "rust_area_delta": {
+        "mean": -0.0714,
+        "min": -0.1355,
+        "max": 0.0015
+      }
+    },
+    "controlnet_canny_c50_s35": {
+      "label": "ControlNet Canny c=0.50, s=0.35 (12)",
+      "count": 12,
+      "status_counts": {
+        "pass": 11,
+        "flag_for_review": 1,
+        "fail": 0
+      },
+      "ssim": {
+        "mean": 0.6106,
+        "min": 0.5623,
+        "max": 0.7172
+      },
+      "lpips": {
+        "mean": 0.2167,
+        "min": 0.1662,
+        "max": 0.2704
+      },
+      "edge_iou": {
+        "mean": 0.2128,
+        "min": 0.1808,
+        "max": 0.238
+      },
+      "rust_area_delta": {
+        "mean": -0.0641,
+        "min": -0.1028,
+        "max": 0.0027
+      }
+    },
+    "controlnet_canny_c80_s35": {
+      "label": "ControlNet Canny c=0.80, s=0.35 (12)",
+      "count": 12,
+      "status_counts": {
+        "pass": 12,
+        "flag_for_review": 0,
+        "fail": 0
+      },
+      "ssim": {
+        "mean": 0.6345,
+        "min": 0.5832,
+        "max": 0.7317
+      },
+      "lpips": {
+        "mean": 0.1971,
+        "min": 0.1527,
+        "max": 0.2529
+      },
+      "edge_iou": {
+        "mean": 0.2527,
+        "min": 0.2195,
+        "max": 0.2829
+      },
+      "rust_area_delta": {
+        "mean": -0.0626,
+        "min": -0.0999,
+        "max": 0.0029
+      }
+    }
+  }
+}

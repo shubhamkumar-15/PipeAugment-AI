@@ -1,0 +1,38 @@
+========================================================================
+PIPEAUGMENT AI — HUMAN GENERATIVE REVIEW SUMMARY
+========================================================================
+Evaluation Scope: 48 generated candidate variations across 6 training parents
+Parent Distribution: 3 non-corroded parents, 3 corroded parents
+Total Evaluated Records: 48
+------------------------------------------------------------------------
+Overall Decision Status:
+  • Approved:      1 / 48 (2.1%)
+  • Rejected:      3 / 48 (6.2%)
+  • Needs Review:  2 / 48 (4.2%)
+  • Pending:      42 / 48 (87.5%)
+------------------------------------------------------------------------
+Breakdown by Augmentation Method:
+  • Plain SD 1.5 (strength 0.20)           Approved:  0/12 | Rejected:  1/12
+  • Plain SD 1.5 (strength 0.35)           Approved:  0/12 | Rejected:  2/12
+  • ControlNet Canny (scale 0.50, s=0.35)  Approved:  0/12 | Rejected:  0/12
+  • ControlNet Canny (scale 0.80, s=0.35)  Approved:  1/12 | Rejected:  0/12
+
+Breakdown by Environmental Lighting Condition:
+  • Low-Light Inspection                   Approved:  1/24 | Rejected:  1/24
+  • Directional Lighting                   Approved:  0/24 | Rejected:  2/24
+
+Breakdown by Source Parent Class (Inherited Label):
+  • Class: non_corroded                    Approved:  1/24 | Rejected:  3/24
+  • Class: corroded                        Approved:  0/24 | Rejected:  0/24
+
+Structured Failure Modes for Rejected Outputs:
+  • Pipe Geometry Distorted/Altered:  2 / 3
+  • Corrosion Hallucinated or Erased:   3 / 3
+  • Condition Insufficiently Visible:   3 / 3
+  • Visual Artifacts / Low Realism:    3 / 3
+------------------------------------------------------------------------
+METHODOLOGICAL NOTICE:
+- Visual inspection was performed on a small sample of 6 training parents.
+- Higher approval in one method does NOT imply statistical significance.
+- Quantitative metrics (SSIM, Edge IoU) are descriptive heuristics, NOT proof of defect retention.
+========================================================================

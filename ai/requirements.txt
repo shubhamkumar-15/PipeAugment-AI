@@ -1,0 +1,20 @@
+# PipeAugment AI - AI Environment Dependencies
+--extra-index-url https://download.pytorch.org/whl/cu130
+torch==2.14.1+cu130
+torchvision==0.29.1+cu130
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+imagehash
+pillow
+pytest
+opencv-python-headless
+diffusers
+transformers
+accelerate
+safetensors
+huggingface_hub
+lpips==0.1.4
+scikit-image==0.26.0

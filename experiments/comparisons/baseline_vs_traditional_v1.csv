@@ -1,0 +1,17 @@
+metric,baseline_a,experiment_b_traditional_v1,delta,notes
+evaluation_context,shared_validation_split,shared_validation_split,identical,Development comparison on shared validation split; test set remains sealed
+training_pool_size,480,1440,+960,Expanded pool contains 480 originals + 960 traditional variations
+samples_per_epoch,480,480,0,Matched-budget control: exactly 480 samples drawn per epoch
+optimizer_steps_per_epoch,30,30,0,Batch size 16 across 480 samples
+validation_samples,60,60,0,Identical frozen validation split (29 non_corroded; 31 corroded)
+best_epoch,4,3,-1,Epoch at which peak validation macro-F1 occurred
+total_epochs_trained,9,8,-1,Both triggered early stopping after 5 fine-tuning epochs without improvement
+actual_total_steps,270,240,-30,Total optimizer parameter updates across all epochs
+validation_accuracy,0.966667,0.966667,0.000000,58/60 correct predictions on validation split
+validation_macro_f1,0.966667,0.966667,0.000000,Unweighted harmonic mean of per-class F1 scores
+corrosion_precision,1.000000,1.000000,0.000000,Zero false positives for corrosion (29/29)
+corrosion_recall,0.935484,0.935484,0.000000,29 of 31 corroded images correctly identified
+non_corroded_precision,0.935484,0.935484,0.000000,29 of 31 predicted non-corroded were true non-corroded
+non_corroded_recall,1.000000,1.000000,0.000000,All 29 non-corroded images correctly identified (29/29)
+validation_errors_count,2,2,0,Identical 2 false-negative error cases in both experiments
+random_seed,42,42,0,Single-seed run; no claims of statistical significance

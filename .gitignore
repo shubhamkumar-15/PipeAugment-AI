@@ -1,0 +1,79 @@
+# Python virtual environments
+.venv/
+.venv*/
+backend/.venv/
+venv/
+env/
+ENV/
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Environment variables and local secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Frontend (Node / Next.js)
+frontend/node_modules/
+node_modules/
+frontend/.next/
+.next/
+frontend/out/
+out/
+
+# Logs
+*.log
+logs/
+
+# Model weights and checkpoints
+*.pt
+*.pth
+*.bin
+*.onnx
+*.safetensors
+checkpoints/
+models/
+
+# Dataset contents and generated exports
+# Directory structure is preserved via .gitkeep
+datasets/raw/*
+!datasets/raw/.gitkeep
+!datasets/raw/k-pipelines/SOURCE.json
+datasets/original/*
+!datasets/original/.gitkeep
+datasets/augmented/*
+!datasets/augmented/.gitkeep
+datasets/annotations/*
+!datasets/annotations/.gitkeep
+datasets/metadata/*
+!datasets/metadata/.gitkeep
+datasets/exports/*
+!datasets/exports/.gitkeep
+
+# Dataset manifests: TRACK all reproducible CSVs & JSONs
+datasets/manifests/*
+!datasets/manifests/.gitkeep
+!datasets/manifests/*.csv
+!datasets/manifests/*.json
+
+# Heavy experiment outputs and intermediate files
+experiments/**/*.png
+!experiments/final_evaluation/charts/*.png
+experiments/reviews/**/*.html
+experiments/pilots/**/outputs/
+experiments/pilots/**/contact_sheets/
+experiments/pilots/**/control_maps/
+
+# Internal agent skills and heavy design asset dumps
+.agents/
+design-reference/
+skills-lock.json
+
+# OS generated files
+.DS_Store
+Thumbs.db

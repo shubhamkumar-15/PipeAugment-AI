@@ -1,0 +1,729 @@
+{
+  "metadata": {
+    "benchmark_timestamp": "2026-11-22T15:51:29.740963+00:00",
+    "test_sample_count": 60,
+    "test_sha256": "50141eba61def5eea05ff78e44e2c4fa7343078155dfc171e2e501b7f41d5e01",
+    "class_distribution": {
+      "corroded": 31,
+      "non_corroded": 29
+    },
+    "seeds_evaluated": [
+      42,
+      101,
+      202
+    ],
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "dataset_provenance": "K-Pipelines Standard test split (held-out sealed set)",
+    "caveats": [
+      "Perturbation tests (conditions 2-7) are synthetic controlled stress simulations applied at inference time.",
+      "They are not physical subsea inspection captures.",
+      "Dataset size is 60 images (29 non-corroded, 31 corroded) reflecting K-Pipelines test allocation.",
+      "Test set is now unsealed; no further model tuning is permitted on this split."
+    ]
+  },
+  "experiments": {
+    "A": {
+      "key": "A",
+      "name": "Baseline A",
+      "prefix": "baseline_resnet18",
+      "description": "Clean industrial originals only (ResNet-18 ImageNet-1K V1)",
+      "pool_size": 480
+    },
+    "B": {
+      "key": "B",
+      "name": "Experiment B",
+      "prefix": "traditional_resnet18",
+      "description": "Originals + Traditional CV augmentations (960 transforms)",
+      "pool_size": 1440
+    },
+    "C": {
+      "key": "C",
+      "name": "Experiment C (PipeAugment AI)",
+      "prefix": "pipeaugment_resnet18",
+      "description": "Originals + Traditional CV + Quality-Screened ControlNet Canny",
+      "pool_size": 1609
+    }
+  },
+  "clean_test_summary": {
+    "A": {
+      "experiment_name": "Baseline A",
+      "accuracy_mean": 0.9444444444444443,
+      "accuracy_std": 0.00962250448649373,
+      "macro_f1_mean": 0.9442616959064326,
+      "macro_f1_std": 0.009721985265959385,
+      "corrosion_recall_mean": 0.967741935483871,
+      "corrosion_recall_std": 0.0,
+      "corrosion_precision_mean": 0.9280303030303031,
+      "corrosion_precision_std": 0.016401996283796204,
+      "corrosion_f1_mean": 0.9474206349206349,
+      "corrosion_f1_std": 0.00859152186294083,
+      "false_negatives_mean": 1.0,
+      "false_positives_mean": 2.3333333333333335,
+      "summed_confusion_matrix": [
+        [
+          80,
+          7
+        ],
+        [
+          3,
+          90
+        ]
+      ],
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 0.95,
+          "macro_f1": 0.949874686716792,
+          "corrosion_recall": 0.967741935483871,
+          "corrosion_precision": 0.9375,
+          "false_negatives": 1,
+          "false_positives": 2
+        },
+        {
+          "seed": 101,
+          "accuracy": 0.9333333333333333,
+          "macro_f1": 0.9330357142857143,
+          "corrosion_recall": 0.967741935483871,
+          "corrosion_precision": 0.9090909090909091,
+          "false_negatives": 1,
+          "false_positives": 3
+        },
+        {
+          "seed": 202,
+          "accuracy": 0.95,
+          "macro_f1": 0.949874686716792,
+          "corrosion_recall": 0.967741935483871,
+          "corrosion_precision": 0.9375,
+          "false_negatives": 1,
+          "false_positives": 2
+        }
+      ]
+    },
+    "B": {
+      "experiment_name": "Experiment B",
+      "accuracy_mean": 0.9277777777777777,
+      "accuracy_std": 0.009622504486493794,
+      "macro_f1_mean": 0.9277206219376843,
+      "macro_f1_std": 0.009593058531471412,
+      "corrosion_recall_mean": 0.9247311827956989,
+      "corrosion_recall_std": 0.018624202231923397,
+      "corrosion_precision_mean": 0.9347670250896057,
+      "corrosion_precision_std": 0.0012416134821281878,
+      "corrosion_f1_mean": 0.9296668429402432,
+      "corrosion_f1_std": 0.010075388092679835,
+      "false_negatives_mean": 2.3333333333333335,
+      "false_positives_mean": 2.0,
+      "summed_confusion_matrix": [
+        [
+          81,
+          6
+        ],
+        [
+          7,
+          86
+        ]
+      ],
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 0.9166666666666666,
+          "macro_f1": 0.9166435120866907,
+          "corrosion_recall": 0.9032258064516129,
+          "corrosion_precision": 0.9333333333333333,
+          "false_negatives": 3,
+          "false_positives": 2
+        },
+        {
+          "seed": 101,
+          "accuracy": 0.9333333333333333,
+          "macro_f1": 0.9332591768631813,
+          "corrosion_recall": 0.9354838709677419,
+          "corrosion_precision": 0.9354838709677419,
+          "false_negatives": 2,
+          "false_positives": 2
+        },
+        {
+          "seed": 202,
+          "accuracy": 0.9333333333333333,
+          "macro_f1": 0.9332591768631813,
+          "corrosion_recall": 0.9354838709677419,
+          "corrosion_precision": 0.9354838709677419,
+          "false_negatives": 2,
+          "false_positives": 2
+        }
+      ]
+    },
+    "C": {
+      "experiment_name": "Experiment C (PipeAugment AI)",
+      "accuracy_mean": 0.9444444444444443,
+      "accuracy_std": 0.025458753860865796,
+      "macro_f1_mean": 0.9443206954476787,
+      "macro_f1_std": 0.0255428448306225,
+      "corrosion_recall_mean": 0.956989247311828,
+      "corrosion_recall_std": 0.01862420223192346,
+      "corrosion_precision_mean": 0.9371639784946236,
+      "corrosion_precision_std": 0.030747344848412437,
+      "corrosion_f1_mean": 0.9469192694999147,
+      "corrosion_f1_std": 0.024023742358645413,
+      "false_negatives_mean": 1.3333333333333333,
+      "false_positives_mean": 2.0,
+      "summed_confusion_matrix": [
+        [
+          81,
+          6
+        ],
+        [
+          4,
+          89
+        ]
+      ],
+      "per_seed_runs": [
+        {
+          "seed": 42,
+          "accuracy": 0.95,
+          "macro_f1": 0.949874686716792,
+          "corrosion_recall": 0.967741935483871,
+          "corrosion_precision": 0.9375,
+          "false_negatives": 1,
+          "false_positives": 2
+        },
+        {
+          "seed": 101,
+          "accuracy": 0.9666666666666667,
+          "macro_f1": 0.9666295884315907,
+          "corrosion_recall": 0.967741935483871,
+          "corrosion_precision": 0.967741935483871,
+          "false_negatives": 1,
+          "false_positives": 1
+        },
+        {
+          "seed": 202,
+          "accuracy": 0.9166666666666666,
+          "macro_f1": 0.9164578111946533,
+          "corrosion_recall": 0.9354838709677419,
+          "corrosion_precision": 0.90625,
+          "false_negatives": 2,
+          "false_positives": 3
+        }
+      ]
+    }
+  },
+  "overall_robustness_summary": {
+    "A": {
+      "experiment_name": "Baseline A",
+      "clean_macro_f1": 0.9442616959064326,
+      "average_stress_macro_f1": 0.9020269331762133,
+      "average_stress_accuracy": 0.9037037037037036,
+      "average_stress_corrosion_recall": 0.9551971326164875,
+      "average_stress_corrosion_precision": 0.8777700806319887,
+      "average_macro_f1_robustness_gap": 0.04223476273021931
+    },
+    "B": {
+      "experiment_name": "Experiment B",
+      "clean_macro_f1": 0.9277206219376843,
+      "average_stress_macro_f1": 0.9192448381564963,
+      "average_stress_accuracy": 0.9194444444444444,
+      "average_stress_corrosion_recall": 0.9372759856630825,
+      "average_stress_corrosion_precision": 0.9094790408832155,
+      "average_macro_f1_robustness_gap": 0.008475783781188073
+    },
+    "C": {
+      "experiment_name": "Experiment C (PipeAugment AI)",
+      "clean_macro_f1": 0.9443206954476787,
+      "average_stress_macro_f1": 0.9076420742975361,
+      "average_stress_accuracy": 0.9083333333333332,
+      "average_stress_corrosion_recall": 0.949820788530466,
+      "average_stress_corrosion_precision": 0.8839954817856462,
+      "average_macro_f1_robustness_gap": 0.03667862115014264
+    }
+  },
+  "robustness_by_condition": [
+    {
+      "condition_name": "clean_test",
+      "display_name": "Clean Held-Out Test Split",
+      "description": "Unmodified 60 held-out test images from K-Pipelines test manifest.",
+      "is_stress": false,
+      "experiments": {
+        "A": {
+          "accuracy": {
+            "mean": 0.9444444444444443,
+            "std": 0.00962250448649373
+          },
+          "macro_f1": {
+            "mean": 0.9442616959064326,
+            "std": 0.009721985265959385
+          },
+          "corrosion_recall": {
+            "mean": 0.967741935483871,
+            "std": 0.0
+          },
+          "corrosion_precision": {
+            "mean": 0.9280303030303031,
+            "std": 0.016401996283796204
+          },
+          "false_negatives_mean": 1.0,
+          "robustness_gap": 0.0
+        },
+        "B": {
+          "accuracy": {
+            "mean": 0.9277777777777777,
+            "std": 0.009622504486493794
+          },
+          "macro_f1": {
+            "mean": 0.9277206219376843,
+            "std": 0.009593058531471412
+          },
+          "corrosion_recall": {
+            "mean": 0.9247311827956989,
+            "std": 0.018624202231923397
+          },
+          "corrosion_precision": {
+            "mean": 0.9347670250896057,
+            "std": 0.0012416134821281878
+          },
+          "false_negatives_mean": 2.3333333333333335,
+          "robustness_gap": 0.0
+        },
+        "C": {
+          "accuracy": {
+            "mean": 0.9444444444444443,
+            "std": 0.025458753860865796
+          },
+          "macro_f1": {
+            "mean": 0.9443206954476787,
+            "std": 0.0255428448306225
+          },
+          "corrosion_recall": {
+            "mean": 0.956989247311828,
+            "std": 0.01862420223192346
+          },
+          "corrosion_precision": {
+            "mean": 0.9371639784946236,
+            "std": 0.030747344848412437
+          },
+          "false_negatives_mean": 1.3333333333333333,
+          "robustness_gap": 0.0
+        }
+      }
+    },
+    {
+      "condition_name": "severe_low_light",
+      "display_name": "Severe Low-Light",
+      "description": "Controlled Synthetic Perturbation: Out-of-distribution dimming (0.55x) and non-linear contrast compression (gamma 1.45).",
+      "is_stress": true,
+      "experiments": {
+        "A": {
+          "accuracy": {
+            "mean": 0.8722222222222221,
+            "std": 0.06938886664887108
+          },
+          "macro_f1": {
+            "mean": 0.8692902744923119,
+            "std": 0.07209365980477961
+          },
+          "corrosion_recall": {
+            "mean": 0.967741935483871,
+            "std": 0.03225806451612906
+          },
+          "corrosion_precision": {
+            "mean": 0.8224400871459695,
+            "std": 0.0821934947095681
+          },
+          "false_negatives_mean": 1.0,
+          "robustness_gap": 0.07497142141412072
+        },
+        "B": {
+          "accuracy": {
+            "mean": 0.9277777777777777,
+            "std": 0.025458753860865747
+          },
+          "macro_f1": {
+            "mean": 0.9274879908103593,
+            "std": 0.025615163239414488
+          },
+          "corrosion_recall": {
+            "mean": 0.956989247311828,
+            "std": 0.01862420223192346
+          },
+          "corrosion_precision": {
+            "mean": 0.908459595959596,
+            "std": 0.02936115139957951
+          },
+          "false_negatives_mean": 1.3333333333333333,
+          "robustness_gap": 0.00023263112732507807
+        },
+        "C": {
+          "accuracy": {
+            "mean": 0.8722222222222222,
+            "std": 0.063098981620003
+          },
+          "macro_f1": {
+            "mean": 0.8712045992301554,
+            "std": 0.06298266952867329
+          },
+          "corrosion_recall": {
+            "mean": 0.935483870967742,
+            "std": 0.08534681648595452
+          },
+          "corrosion_precision": {
+            "mean": 0.8353775853775854,
+            "std": 0.04118298899743644
+          },
+          "false_negatives_mean": 2.0,
+          "robustness_gap": 0.07311609621752335
+        }
+      }
+    },
+    {
+      "condition_name": "harsh_shadows_uneven",
+      "display_name": "Harsh Shadows & Uneven Light",
+      "description": "Controlled Synthetic Perturbation: Strong directional gradient + deep spatial shadow (0.50x falloff).",
+      "is_stress": true,
+      "experiments": {
+        "A": {
+          "accuracy": {
+            "mean": 0.9166666666666666,
+            "std": 0.02886751345948125
+          },
+          "macro_f1": {
+            "mean": 0.916139385711754,
+            "std": 0.02921698704657807
+          },
+          "corrosion_recall": {
+            "mean": 0.956989247311828,
+            "std": 0.01862420223192346
+          },
+          "corrosion_precision": {
+            "mean": 0.8911435786435785,
+            "std": 0.041579022249614336
+          },
+          "false_negatives_mean": 1.3333333333333333,
+          "robustness_gap": 0.02812231019467859
+        },
+        "B": {
+          "accuracy": {
+            "mean": 0.9388888888888888,
+            "std": 0.01924500897298752
+          },
+          "macro_f1": {
+            "mean": 0.9387357282094125,
+            "std": 0.019293242078182983
+          },
+          "corrosion_recall": {
+            "mean": 0.956989247311828,
+            "std": 0.01862420223192346
+          },
+          "corrosion_precision": {
+            "mean": 0.9270833333333334,
+            "std": 0.018042195912175808
+          },
+          "false_negatives_mean": 1.3333333333333333,
+          "robustness_gap": -0.011015106271728192
+        },
+        "C": {
+          "accuracy": {
+            "mean": 0.9166666666666666,
+            "std": 0.028867513459481315
+          },
+          "macro_f1": {
+            "mean": 0.9161963036963038,
+            "std": 0.029166714710372525
+          },
+          "corrosion_recall": {
+            "mean": 0.956989247311828,
+            "std": 0.01862420223192346
+          },
+          "corrosion_precision": {
+            "mean": 0.890374331550802,
+            "std": 0.03241806324326776
+          },
+          "false_negatives_mean": 1.3333333333333333,
+          "robustness_gap": 0.028124391751374933
+        }
+      }
+    },
+    {
+      "condition_name": "overexposed_bright",
+      "display_name": "Overexposed Glare",
+      "description": "Controlled Synthetic Perturbation: High inspection glare (1.40x brightness, 1.20x contrast).",
+      "is_stress": true,
+      "experiments": {
+        "A": {
+          "accuracy": {
+            "mean": 0.9499999999999998,
+            "std": 0.016666666666666663
+          },
+          "macro_f1": {
+            "mean": 0.9499458694939054,
+            "std": 0.016648241682918834
+          },
+          "corrosion_recall": {
+            "mean": 0.946236559139785,
+            "std": 0.037248404463846856
+          },
+          "corrosion_precision": {
+            "mean": 0.9569197256210605,
+            "std": 0.016854721100115266
+          },
+          "false_negatives_mean": 1.6666666666666667,
+          "robustness_gap": -0.005684173587472752
+        },
+        "B": {
+          "accuracy": {
+            "mean": 0.9277777777777777,
+            "std": 0.01924500897298752
+          },
+          "macro_f1": {
+            "mean": 0.9276586699993787,
+            "std": 0.0192398588949248
+          },
+          "corrosion_recall": {
+            "mean": 0.935483870967742,
+            "std": 0.03225806451612906
+          },
+          "corrosion_precision": {
+            "mean": 0.9256944444444445,
+            "std": 0.01696776628176475
+          },
+          "false_negatives_mean": 2.0,
+          "robustness_gap": 6.195193830560441e-05
+        },
+        "C": {
+          "accuracy": {
+            "mean": 0.9166666666666666,
+            "std": 0.04409585518440981
+          },
+          "macro_f1": {
+            "mean": 0.9164389042288748,
+            "std": 0.0444140687523198
+          },
+          "corrosion_recall": {
+            "mean": 0.9247311827956989,
+            "std": 0.018624202231923393
+          },
+          "corrosion_precision": {
+            "mean": 0.9168784620397523,
+            "std": 0.06124831808485329
+          },
+          "false_negatives_mean": 2.3333333333333335,
+          "robustness_gap": 0.027881791218803964
+        }
+      }
+    },
+    {
+      "condition_name": "sensor_blur_noise",
+      "display_name": "Sensor Blur & Noise",
+      "description": "Controlled Synthetic Perturbation: Defocus optical blur (sigma 1.4) + Gaussian sensor noise (std 12.0).",
+      "is_stress": true,
+      "experiments": {
+        "A": {
+          "accuracy": {
+            "mean": 0.9111111111111111,
+            "std": 0.04194352464039301
+          },
+          "macro_f1": {
+            "mean": 0.9101952971922013,
+            "std": 0.043152818762875855
+          },
+          "corrosion_recall": {
+            "mean": 0.956989247311828,
+            "std": 0.01862420223192346
+          },
+          "corrosion_precision": {
+            "mean": 0.8848536036036037,
+            "std": 0.06599918180112033
+          },
+          "false_negatives_mean": 1.3333333333333333,
+          "robustness_gap": 0.03406639871423134
+        },
+        "B": {
+          "accuracy": {
+            "mean": 0.9055555555555556,
+            "std": 0.03469443332443553
+          },
+          "macro_f1": {
+            "mean": 0.9052126613653311,
+            "std": 0.034565560147536596
+          },
+          "corrosion_recall": {
+            "mean": 0.935483870967742,
+            "std": 0.05587260669577025
+          },
+          "corrosion_precision": {
+            "mean": 0.8874705307342877,
+            "std": 0.019570034763684827
+          },
+          "false_negatives_mean": 2.0,
+          "robustness_gap": 0.02250796057235327
+        },
+        "C": {
+          "accuracy": {
+            "mean": 0.9388888888888888,
+            "std": 0.0254587538608658
+          },
+          "macro_f1": {
+            "mean": 0.9385452003324811,
+            "std": 0.02554367498554639
+          },
+          "corrosion_recall": {
+            "mean": 0.978494623655914,
+            "std": 0.037248404463846856
+          },
+          "corrosion_precision": {
+            "mean": 0.9104527417027417,
+            "std": 0.027085486577812568
+          },
+          "false_negatives_mean": 0.6666666666666666,
+          "robustness_gap": 0.005775495115197593
+        }
+      }
+    },
+    {
+      "condition_name": "heavy_compression",
+      "display_name": "Heavy Low-Bitrate Compression",
+      "description": "Controlled Synthetic Perturbation: Downscale/upscale (0.50x) + aggressive lossy JPEG compression (Q35).",
+      "is_stress": true,
+      "experiments": {
+        "A": {
+          "accuracy": {
+            "mean": 0.9277777777777777,
+            "std": 0.009622504486493794
+          },
+          "macro_f1": {
+            "mean": 0.9274596024109373,
+            "std": 0.009852266918783933
+          },
+          "corrosion_recall": {
+            "mean": 0.956989247311828,
+            "std": 0.01862420223192346
+          },
+          "corrosion_precision": {
+            "mean": 0.908975907078374,
+            "std": 0.026565651586558457
+          },
+          "false_negatives_mean": 1.3333333333333333,
+          "robustness_gap": 0.01680209349549533
+        },
+        "B": {
+          "accuracy": {
+            "mean": 0.9222222222222222,
+            "std": 0.034694433324435545
+          },
+          "macro_f1": {
+            "mean": 0.9221449268337801,
+            "std": 0.034650564518930886
+          },
+          "corrosion_recall": {
+            "mean": 0.924731182795699,
+            "std": 0.04927500747264345
+          },
+          "corrosion_precision": {
+            "mean": 0.9243279569892473,
+            "std": 0.021092731272210286
+          },
+          "false_negatives_mean": 2.3333333333333335,
+          "robustness_gap": 0.00557569510390421
+        },
+        "C": {
+          "accuracy": {
+            "mean": 0.9388888888888888,
+            "std": 0.01924500897298752
+          },
+          "macro_f1": {
+            "mean": 0.9387357282094125,
+            "std": 0.019293242078182983
+          },
+          "corrosion_recall": {
+            "mean": 0.956989247311828,
+            "std": 0.01862420223192346
+          },
+          "corrosion_precision": {
+            "mean": 0.9270833333333334,
+            "std": 0.018042195912175808
+          },
+          "false_negatives_mean": 1.3333333333333333,
+          "robustness_gap": 0.005584967238266181
+        }
+      }
+    },
+    {
+      "condition_name": "combined_harsh_field",
+      "display_name": "Combined Harsh Field Conditions",
+      "description": "Controlled Synthetic Perturbation: Combined low-light (0.65x) + shadow (0.60x) + blur (sigma 1.0) + noise (std 8.0) + JPEG (Q50).",
+      "is_stress": true,
+      "experiments": {
+        "A": {
+          "accuracy": {
+            "mean": 0.8444444444444444,
+            "std": 0.058531409738070785
+          },
+          "macro_f1": {
+            "mean": 0.8391311697561697,
+            "std": 0.06588351338802838
+          },
+          "corrosion_recall": {
+            "mean": 0.946236559139785,
+            "std": 0.04927500747264346
+          },
+          "corrosion_precision": {
+            "mean": 0.8022875816993463,
+            "std": 0.08904222093963875
+          },
+          "false_negatives_mean": 1.6666666666666667,
+          "robustness_gap": 0.10513052615026286
+        },
+        "B": {
+          "accuracy": {
+            "mean": 0.8944444444444445,
+            "std": 0.06735753140545636
+          },
+          "macro_f1": {
+            "mean": 0.8942290517207162,
+            "std": 0.06721511123475807
+          },
+          "corrosion_recall": {
+            "mean": 0.913978494623656,
+            "std": 0.0931210111596171
+          },
+          "corrosion_precision": {
+            "mean": 0.8838383838383838,
+            "std": 0.04373865675678979
+          },
+          "false_negatives_mean": 2.6666666666666665,
+          "robustness_gap": 0.033491570216968136
+        },
+        "C": {
+          "accuracy": {
+            "mean": 0.8666666666666667,
+            "std": 0.033333333333333326
+          },
+          "macro_f1": {
+            "mean": 0.8647317100879883,
+            "std": 0.032561546267791654
+          },
+          "corrosion_recall": {
+            "mean": 0.946236559139785,
+            "std": 0.09312101115961705
+          },
+          "corrosion_precision": {
+            "mean": 0.8238064367096625,
+            "std": 0.02506192629823648
+          },
+          "false_negatives_mean": 1.6666666666666667,
+          "robustness_gap": 0.07958898535969039
+        }
+      }
+    }
+  ],
+  "artifacts": {
+    "per_run_metrics_csv": "experiments/final_evaluation/per_run_metrics.csv",
+    "aggregated_summary_csv": "experiments/final_evaluation/aggregated_summary.csv",
+    "stress_preview_png": "experiments/final_evaluation/stress_suite_preview.png",
+    "charts": {
+      "f1_clean_vs_stress": "experiments/final_evaluation/charts/abc_clean_vs_stress_f1.png",
+      "corrosion_recall": "experiments/final_evaluation/charts/abc_corrosion_recall_robustness.png",
+      "confusion_matrices": "experiments/final_evaluation/charts/abc_confusion_matrices_clean.png"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "experiment_name": "traditional_resnet18",
+  "model": {
+    "architecture": "resnet18",
+    "num_classes": 2,
+    "pretrained": true,
+    "weights": "ResNet18_Weights.DEFAULT"
+  },
+  "dataset": {
+    "name": "k-pipelines-traditional-v1",
+    "train_manifest": "datasets/manifests/train_traditional_v1.csv",
+    "val_manifest": "datasets/manifests/val.csv",
+    "test_manifest": "datasets/manifests/test.csv",
+    "class_mapping": "datasets/manifests/class_mapping.json",
+    "raw_root": "datasets/raw/k-pipelines",
+    "input_size": [
+      224,
+      224
+    ]
+  },
+  "training": {
+    "seed": 101,
+    "batch_size": 16,
+    "samples_per_epoch": 480,
+    "max_epochs": 20,
+    "warmup_epochs": 2,
+    "warmup_lr": 0.001,
+    "finetune_lr": 0.0001,
+    "weight_decay": 0.0001,
+    "optimizer": "AdamW",
+    "loss_function": "CrossEntropyLoss",
+    "num_workers": 0,
+    "pin_memory": true,
+    "best_checkpoint_metric": "macro_f1",
+    "early_stopping_patience": 5,
+    "decision_threshold": "argmax"
+  }
+}

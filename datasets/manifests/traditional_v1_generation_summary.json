@@ -1,0 +1,31 @@
+{
+  "config_version": "traditional_v1",
+  "base_seed": 42,
+  "parent_training_images": 480,
+  "variations_generated": 960,
+  "total_augmented_training_pool": 1440,
+  "failed_outputs": 0,
+  "all_technical_validation_passed": true,
+  "human_review_status": "not_reviewed",
+  "transform_distribution": {
+    "gaussian_blur": 120,
+    "gaussian_noise": 120,
+    "jpeg_compression": 120,
+    "downsample_restore": 120,
+    "brightness": 96,
+    "contrast": 96,
+    "gamma": 96,
+    "uneven_illumination": 96,
+    "soft_shadow": 96
+  },
+  "class_distribution_generated": {
+    "non_corroded": 484,
+    "corroded": 476
+  },
+  "manifests_created": [
+    "D:/vscode/Gen AI Project/pipeaugment-ai/datasets/manifests/traditional_v1_generated.csv",
+    "D:/vscode/Gen AI Project/pipeaugment-ai/datasets/manifests/train_traditional_v1.csv"
+  ],
+  "generation_time_utc_start": "2026-11-22T11:30:42.150929+00:00",
+  "generation_time_utc_end": "2026-11-22T11:31:19.363584+00:00"
+}

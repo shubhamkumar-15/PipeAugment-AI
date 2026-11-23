@@ -1,0 +1,39 @@
+{
+  "pilot_name": "controlnet_canny_v1",
+  "model": {
+    "model_id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+    "model_revision": "main",
+    "controlnet_id": "lllyasviel/control_v11p_sd15_canny",
+    "controlnet_revision": "main",
+    "torch_dtype": "float16",
+    "variant": "fp16",
+    "use_safetensors": true,
+    "device": "cuda",
+    "offload_strategy": "none"
+  },
+  "dataset": {
+    "sources_manifest": "experiments/pilots/diffusion_v1/sources.csv",
+    "raw_root": "datasets/raw/k-pipelines",
+    "selection_seed": 42,
+    "target_size": [512, 512]
+  },
+  "controlnet": {
+    "canny_low_threshold": 100,
+    "canny_high_threshold": 200,
+    "control_scales": [0.5, 0.8]
+  },
+  "generation": {
+    "mode": "controlnet_img2img",
+    "num_inference_steps": 30,
+    "guidance_scale": 5.0,
+    "strengths": [0.35],
+    "conditions": [
+      "low_light_inspection",
+      "directional_industrial_lighting"
+    ]
+  },
+  "storage": {
+    "output_dir": "experiments/pilots/controlnet_canny_v1",
+    "reference_diffusion_dir": "experiments/pilots/diffusion_v1"
+  }
+}

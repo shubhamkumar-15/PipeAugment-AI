@@ -1,0 +1,42 @@
+{
+  "config_version": "1.0",
+  "frozen_at_utc": "2026-11-22T14:15:00+00:00",
+  "selection_rationale": "Frozen based on human review outcomes across both classes (100% verified approval for non-corroded and corroded) and Phase 4 screening metrics superiority (SSIM 0.6345, LPIPS 0.1971, Edge IoU 0.2527, 100% pass rate).",
+  "model_id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "model_revision": "main",
+  "controlnet_id": "lllyasviel/control_v11p_sd15_canny",
+  "controlnet_revision": "main",
+  "license": "CreativeML OpenRAIL-M",
+  "precision": "float16",
+  "device": "cuda",
+  "offload_strategy": "none",
+  "scheduler": "PNDMScheduler",
+  "strength": 0.35,
+  "control_scale": 0.80,
+  "guidance_scale": 5.0,
+  "num_inference_steps": 30,
+  "effective_denoising_steps": 10,
+  "canny_low_threshold": 100,
+  "canny_high_threshold": 200,
+  "conditions": {
+    "low_light_inspection": {
+      "prompt": "Photorealistic photograph of the same industrial pipeline, same viewpoint, same pipe shape, same joints and background, retaining existing surface texture, rust locations and surface defects, dim low-light ambient inspection conditions, deep realistic shadows, underexposed industrial environment.",
+      "description": "Dim low-light ambient inspection illumination"
+    },
+    "directional_industrial_lighting": {
+      "prompt": "Photorealistic photograph of the same industrial pipeline, same viewpoint, same pipe shape, same joints and background, retaining existing surface texture, rust locations and surface defects, harsh directional industrial work light casting focused illumination and distinct directional shadows.",
+      "description": "Harsh directional industrial work light beam"
+    }
+  },
+  "negative_prompt": "changed pipe geometry, added or missing pipes, changed joints, altered structural features, painted-over surfaces, invented surface defects, removed corrosion, added corrosion, text, watermarks, signature, logo, illustration, rendering, 3d render, cartoon, blurry, heavy blur, out of focus, distorted, artifact",
+  "expansion_targets": {
+    "parent_count": 100,
+    "class_balance": {
+      "non_corroded": 50,
+      "corroded": 50
+    },
+    "variations_per_parent": 2,
+    "total_target_outputs": 200,
+    "source_manifest": "datasets/manifests/train.csv"
+  }
+}
