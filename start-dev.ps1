@@ -76,5 +76,13 @@ Write-Host "  • Backend API Docs: http://127.0.0.1:8000/docs" -ForegroundColor
 Write-Host "  • Health Check:     http://127.0.0.1:8000/api/v1/health" -ForegroundColor White
 Write-Host "  • Warm AI Worker:   http://127.0.0.1:8001/health" -ForegroundColor White
 Write-Host ""
+
+# 7. Automatically open browser to localhost:3000
+Write-Host "Waiting 4 seconds for Next.js server to initialize..." -ForegroundColor Cyan
+Start-Sleep -Seconds 4
+Write-Host "Launching http://localhost:3000 in your default browser..." -ForegroundColor Green
+Start-Process "http://localhost:3000"
+
+Write-Host ""
 Write-Host "To stop services: Close the respective PowerShell windows or press Ctrl+C in each." -ForegroundColor Gray
 Write-Host "==========================================================" -ForegroundColor DarkYellow

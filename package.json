@@ -1,0 +1,23 @@
+{
+  "name": "pipeaugment-ai",
+  "version": "1.0.0",
+  "description": "Condition-Controlled, Corrosion-Preserving Pipeline Image Augmentation Platform",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "start": "npm run start --prefix frontend",
+    "lint": "npm run lint --prefix frontend"
+  },
+  "keywords": [
+    "deep-learning",
+    "stable-diffusion",
+    "controlnet",
+    "image-augmentation",
+    "corrosion-detection",
+    "fastapi",
+    "nextjs"
+  ],
+  "author": "SHUBHAM KUMAR SINGH",
+  "license": "MIT"
+}
